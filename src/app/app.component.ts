@@ -10,6 +10,7 @@ export class AppComponent {
   title = 'Welcome to GiphySearch';
   link = 'http://api.giphy.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&q=';
   http: Http;
+  giphies =[];
   
  constructor(http:Http){
       this.http = http;
@@ -17,10 +18,12 @@ export class AppComponent {
 
   performSearch(searchTerm : HTMLInputElement): void {
       var apiLink = this.link + searchTerm.value;
-      
+      //making api calls to the api link
       this.http.request(apiLink)
           .subscribe((res: Response) =>{
-            console.log(res.json());
+          //store api calls to giphie var
+                this.giphies = res.json().data;
+                console.log(res.json());
           });
     }
   
