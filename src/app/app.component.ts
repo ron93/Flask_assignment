@@ -23,7 +23,7 @@ export class AppComponent {
           .subscribe((res: Response) =>{
           //store api calls to giphie var
                 this.giphies = res.json().data;
-                console.log(res.json());
+                console.log(this.giphies);
           });
     }
   
