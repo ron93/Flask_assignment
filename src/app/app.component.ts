@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  title = 'Welcome to GiphySearch';
+performSearch():void{
+    console.log('button working')
 }
+    
+}
+
