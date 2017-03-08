@@ -1,5 +1,6 @@
 <h1>
   {{title}}
 </h1>
-<input name="serch">
-<button (click)="performSearch()">Search</button>
+<!--#seach term =>the element to bind to performSearch function -->
+<input name="title" #searchTerm>
+<button (click)="performSearch(searchTerm)">Search</button>
